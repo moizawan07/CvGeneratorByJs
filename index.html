@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV-Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/7e4bb5f098.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="maincontainer">
+       <div class="header">
+            <div class="logo">
+                <h1>
+                  <span class="Left-logo-text">Mz</span><span class="Right-logo-text">Pro.</span>
+                </h1>
+            </div>
+            <div class="navbar">
+               <ul id="navul">
+                  <li><a href="#">Features</a></li>
+                  <li><a href="#">Pricing</a></li>
+                  <li><a href="#">How It Works</a></li>
+                  <li><a href="#">Contact</a></li>
+               </ul>
+            </div>
+            <div class="login">
+              <button>Login</button>
+            </div>
+            <div class="toggle-of-header">
+              <i class="fa-solid fa-bars-staggered"></i>
+            </div>
+       </div>
+
+       <div class="container-of-left-right">
+          <div class="container-left">
+              <div class="box">
+                 <p>MAIN MANU</p>
+                 <ul>
+                    <li class="home">
+                      <span class="Left-icon-box"><i class="fa-solid fa-house"></i></span>
+                      <span class="Right-text-box">Home</span>
+                    </li>
+                    <li onClick = 'cvBuilder()'>
+                      <span class="Left-icon-box"><i class="fa-brands fa-slack"></i></i></span>
+                      <span class="Right-text-box">Cv builder</span>
+                    </li>
+                    <li>
+                      <span class="Left-icon-box"><i class="fa-solid fa-share-from-square"></i></span>
+                      <span class="Right-text-box">Job tracker</span>
+                    </li>
+                    <li>
+                      <span class="Left-icon-box"><i class="fa-solid fa-paper-plane"></i></span>
+                      <span class="Right-text-box">Contacts</span>
+                    </li>
+                    <li>
+                      <span class="Left-icon-box"><i class="fa-brands fa-stack-overflow"></i></span>
+                      <span class="Right-text-box">Profile</span>
+                    </li>
+                    <li>
+                      <span class="Left-icon-box"><i class="fa-brands fa-dropbox"></i></span>
+                      <span class="Right-text-box">Support Center</span>
+                    </li>
+                 </ul>
+              </div>
+              <div class="box">
+                 <p>OTHERS</p>
+                 <ul>
+                    <li>
+                      <span class="Left-icon-box"><i class="fa-solid fa-house"></i></span>
+                      <span class="Right-text-box">Account</span>
+                    </li>
+                    <li>
+                      <span class="Left-icon-box"><i class="fa-brands fa-slack"></i></i></span>
+                      <span class="Right-text-box">Extension</span>
+                    </li>
+                    <li>
+                      <span class="Left-icon-box"><i class="fa-solid fa-share-from-square"></i></span>
+                      <span class="Right-text-box">Refreior</span>
+                    </li>
+                    <li>
+                      <span class="Left-icon-box"><i class="fa-solid fa-paper-plane"></i></span>
+                      <span class="Right-text-box">Logout</span>
+                    </li>
+                 </ul>
+              </div>
+          </div>
+          <div class="container-right">
+            <div class="all-cv-main-con" id="allCvContainer">
+              <div class="Create-Cv" id="showModaal" onclick="showModaalDiv()">
+                      <p>CREATE NEW CV</p>
+              </div>
+              <div id="userCV">
+
+              </div>
+            </div>
+           
+              <div class="modal" id="modal-main">
+                <span onclick="closeModaalDiv()" class="close-btn" id="closeModal">&times;</span>
+                <h2>Create Your CV</h2>
+                
+                <!-- Form Inputs -->
+                <form id="resumeForm">
+                  <!-- Personal Information -->
+                  <label for="fullName">Full Name:</label>
+                  <input type="text" id="fullName" placeholder="Enter your full name" required>
+          
+                  <label for="jobTitle">Job Title:</label>
+                  <input type="text" id="jobTitle" placeholder="Enter your job title" required>
+                  
+                  <label for="image"></label>
+                  <input type="file" id="ImgLink" placeholder="Select Your image">
+                     <!-- Contacts Details -->
+                  <label for="phone">Phone Number:</label>
+                  <input type="text" id="phone" placeholder="Enter your phone number" required>
+          
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" placeholder="Enter your email" required>
+
+                  <label for="address">Address:</label>
+                  <input id="address"  placeholder="Enter your address" required>
+                  <!-- Education -->
+                  <label for="degree">Degree Name:</label>
+                  <input type="text" id="degree" placeholder="Enter your degree name" required>
+          
+                  <label for="university">University Name:</label>
+                  <input type="text" id="university" placeholder="Enter your university name" required>
+          
+                  <!-- Skills -->
+                  <label for="skills">Skills:</label>
+                  <input id="skills"  placeholder="Enter your skills" required>
+               
+                  <!-- Lanuages -->
+                  <label for="Lanuages">Lanuages:</label>
+                  <input id="Lanuages"  placeholder="Enter your Lanuages that you know" required>
+
+                  <!-- Profile Description -->
+                  <label for="Profile">About Me:</label>
+                  <textarea id="Profile" rows="2" placeholder="Enter Your Profile Description" required></textarea>
+
+                  <!-- Experince -->
+                  <label for="Experince">Work Experience:</label>
+                  <textarea id="Experince" rows="2" placeholder="Enter Your Job Experince..." required></textarea>
+
+                  <!-- Buttons -->
+                  <div class="buttons">
+                    <button type="button" class="save" id="createCvBtn">Create</button>
+                    <button type="button" class="cancel" id="cancelModalBtn" onclick="closeModaalDiv()">Cancel</button>
+                  </div>
+                </form>
+              </div>
+              <div class="downloaddiv" onClick="downloadCv()">
+                <i class="fa-solid fa-download"></i>
+              </div>
+          </div>
+       </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas"></script>
+
+ <script src="app.js"></script>
+</body>
+</html>
+

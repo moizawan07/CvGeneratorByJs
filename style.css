@@ -1,0 +1,665 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');   /* font-family: "Alfa Slab One", serif; */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
+  font-weight: 300;
+  list-style: none;
+  outline: none;
+}
+input:focus,textarea:focus{
+ border: 1.4px dotted rgb(55, 119, 236) !important;
+}
+.header{
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #052f38;
+  /* background-color: #012730; */
+  color: whitesmoke;
+  padding-inline: 50px;
+  /* box-shadow: -1px -2px 13px darkslategrey; */
+}
+.logo .Left-logo-text{
+  font-size: 34px;
+  font-weight: 400;
+  font-weight: 500;
+  filter: drop-shadow(-5px -5px 1px rgba(0,0,0,0.5));
+}
+.logo .Right-logo-text{
+  font-family: "Pacifico", serif;
+  color: rgb(219, 161, 13);
+  font-weight: 100;
+  font-size: 37px;
+  filter: drop-shadow(5px 7px 1px rgba(0,0,0,0.7));
+}
+.navbar ul{
+  display: flex;
+  align-items: center;
+  column-gap: 45px;
+}
+.navbar ul li a{
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  filter: drop-shadow(1px 1px 5px black);
+}
+.toggle-of-header{
+  display: none;
+}
+.toggle-of-header i{
+  font-size: 25px;
+}
+.login button{
+  width: 90px;
+  height: 28px;
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-weight: 500;
+  border: 1.2px dotted white;
+  border-radius: 3px;
+}
+.container-of-left-right{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  /* margin-top: 10px; */
+}
+.container-left{
+  /* padding-top: 50px; */
+  width: 18%;
+  min-height: 100Vh;
+  border-right: 0.8px solid rgb(155, 154, 154);
+  padding-inline: 10px;
+  z-index: 9999;
+}
+.container-right{
+  width: 82%;
+  min-height: 200vh;
+  background-color: whitesmoke;
+  position: relative;
+}
+.box p{
+  margin-top: 13px;
+  color: rgb(99, 97, 97);
+  font-weight: 500;
+}
+.box ul{
+  margin-top: 15px;
+  /* padding-left: 0px; */
+}
+.box li {
+ margin-top: 15px;
+ padding-block: 12px;
+ border-radius: 28px;
+ align-content: center;
+ transition: 0.5s ease-in;
+ &:hover{
+   background-color: #216575;
+   border: 1px solid #497781;
+ }
+}
+.home{
+  background-color: #216575;
+  &:hover{
+    background-color: white;
+    border: 1px solid #497781;
+  }
+}
+.home span{
+  color: white !important;
+}
+.box li .Left-icon-box{
+  margin-inline: 12px;
+  color: rgb(45, 45, 45);
+}
+.box li .Right-text-box{
+  font-size: 16px;
+  color: #2b2929;
+}
+.box li:hover .Left-icon-box{
+  color: white;
+}
+.box li:hover .Right-text-box{
+  color: white;
+}
+
+    /* Modal content */
+    .modal {
+      background: #fff;
+      width: 500px;
+      /* max-width: 750px; */
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      margin-left: 20%;
+      /* display: none; */
+      visibility: hidden;
+      position: absolute;
+      top: 50px;
+      /* bottom: -70px; */
+      /* transform: translate(-0%,-50%) scale(0.05); */
+      transition: transform 1s, bottom 5s;
+    }
+
+    .modal h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .modal .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 18px;
+      color: #555;
+      cursor: pointer;
+      /* transition: 1s ease-in; */
+    }
+
+    .modal label {
+      font-weight: 500;
+      display: block;
+      margin-top: 10px;
+    }
+
+    .modal input,
+    .modal textarea,
+    .modal select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;   
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    .modal textarea {
+      resize: vertical;
+    }
+
+    .modal .buttons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .modal button {
+      padding: 10px 30px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    .modal button.save {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .modal button.cancel {
+      background-color: #ccc;
+      color: black;
+    }
+
+    /* Show modal */
+    .modal.show {
+     visibility: visible;
+     /* bottom: -600px; */
+      top: 600px;
+      transform: translate(0%,-50%) scale(1);
+    }
+    /* Cv Banana Start */
+#allCvContainer{
+  margin-top: 30px;
+  width: 100%;
+ display: flex;
+ /* justify-content: space-evenly; */
+ /* align-items: center; */
+ flex-wrap: wrap;
+ row-gap: 20px;
+}
+.Create-Cv{
+  width: 260px;
+  height: 330px;
+  border: 1.9px dotted rgb(78, 78, 78);
+  border: 1.9px dotted #052F38;
+  text-align: center;
+  align-content: center;
+  cursor: pointer;
+  margin-inline: 50px;
+}
+.Create-Cv p{
+  font-weight: 400;
+  color: #4a4a4a;
+  color: #083f4c;
+  font-size: 16px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}    
+/* Cv Work start */
+#userCV{
+  width: 70%;
+  min-height: 100vh;
+  padding-block: 20px;
+  padding-inline: 30px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 2px rgb(177, 175, 175);
+  display: none;
+  margin: auto;
+}
+.cv-header{
+  width: 100%;
+  height: 125px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cv-logo img{
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px coral;
+  margin-top: 2px;
+}
+.cvnav{
+  width: 400px;
+  border-bottom: 1.3px solid black;
+  padding-bottom: 10px;
+  padding-left: 5px;
+}
+.cvnav h1{
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: 550;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.cvnav p{
+  text-transform: capitalize;
+  margin-left: 3px;
+}
+.cvlRmain-flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+}
+.cvleft{
+  width: 35%;
+  min-height: 100vh;
+  /* padding-right: 15px; */
+  /* border: 1px solid black; */
+}
+.cvright{
+  width: 57%;
+  min-height: 100vh;
+  border-left: 1.4px double rgb(93, 78, 78);
+  padding-left: 30px;
+  position: relative;
+}
+/* .About::before{
+  content: '';
+  height: 14px;
+  width: 14px;
+  display: block;
+  border-radius: 50%;
+  border: 1px solid white;
+  background-color: #f67011;
+  position: absolute;
+  top: 9px;
+  left: -8.3px;
+} 
+.Work-Experience::before{
+  content: '';
+  height: 14px;
+  width: 14px;
+  display: block;
+  border-radius: 50%;
+  border: 1px solid white;
+  background-color: #f67011;
+  position: absolute;
+  top: 350px;
+  left: -8.3px; 
+}
+.lanuages::before{
+  content: '';
+  height: 14px;
+  width: 14px;
+  display: block;
+  border-radius: 50%;
+  border: 1px solid white;
+  background-color: #f67011;
+  position: absolute;
+  top: 660px;
+  left: -8.3px; 
+}  */
+.contacts{
+  margin-top: 45px;
+  line-height: 32px;
+}
+.contacts p .cvicon1{
+  margin-right: 9px;
+}
+.educations,.skills{
+  margin-top: 50px;
+}
+.educations h1,.contacts h1,.skills h1,.About h1,.Work-Experience h1,.lanuages h1{
+  font-weight: 300;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-bottom: 10px;
+}
+.educations p,.contacts p{
+ margin-left: 5px;
+}
+.skills ul li,.lanuages ul li{
+  /* list-style-type: disc; */
+  margin-left: 25px;
+  margin-top: 4px;
+}
+.SkillName,.lanuageName{
+  margin-left: 5px;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+.skills button,.lanuages button{
+  margin-top: 15px;
+  height: 38px;
+  /* width: 100px; */
+  width: 80px;
+  color: white;
+  font-weight: 500;
+  font-size: 17.8;
+  border-radius: 5px;
+  text-align: center;
+  align-content: center;
+}
+.lanuages button{
+  width: 110px;
+}
+ .skilladdbtn,.lanuageaddbtn{
+  background-color: #098b4f;
+  border: 1px solid #198754;
+}
+ .skillremovebtn,.lanuageremovebtn{
+  background-color: #f22c40;
+  border: 1px solid #f22c40;
+}
+.skills button i,.lanuages button i{
+  background-color: white;
+  padding-inline: 3px;
+  padding-block: 2px;
+  border-radius: 50%;
+  font-weight: 950;
+}
+.skilladdbtn i,.lanuageaddbtn i{
+  color: #198754;
+}
+.skillremovebtn i,.lanuageremovebtn i{
+  color: #f22c40;
+}
+
+.About,.Work-Experience,.lanuages{
+  margin-top: 45px;
+}
+.About p,.Work-Experience p{
+  font-size: 13px;
+  line-height: 25px;
+  word-wrap: break-word;
+}
+#Select{
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 15px;
+  font-weight: 400;
+  filter: drop-shadow(3px 3px 10px black);
+  /* padding-inline: 10px; */
+}
+#Select option{
+  color: black;
+  margin-top: 5px;
+}
+/* Cv Work End */
+
+/* Cv Style  2 Css*/ 
+.cv-header.cvStyle2{
+  flex-direction: row-reverse;
+}
+/* Cv Style  3 Css*/ 
+.circle1::before{
+  content: '';
+  height: 14px;
+  width: 14px;
+  display: block;
+  border-radius: 50%;
+  border: 1px solid white;
+  background-color: #f67011;
+  position: absolute;
+  top: 9px;
+  left: -8.3px;
+} 
+.circle2::before{
+  content: '';
+  height: 14px;
+  width: 14px;
+  display: block;
+  border-radius: 50%;
+  border: 1px solid white;
+  background-color: #f67011;
+  position: absolute;
+  top: 350px;
+  left: -8.3px; 
+}
+.circle3::before{
+  content: '';
+  height: 14px;
+  width: 14px;
+  display: block;
+  border-radius: 50%;
+  border: 1px solid white;
+  background-color: #f67011;
+  position: absolute;
+  top: 660px;
+  left: -8.3px; 
+}
+
+/* Style 3 */
+.mainLeftRightCvStyle3{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.cvLeftStyle3{
+  width: 33%;
+  min-height: 100vh;
+  padding-inline: 15px;
+  background-color: #163853;
+  color: white;
+}
+.cvRightStyle3{
+  width: 67%;
+  min-height: 100vh;
+  /* border: 1px solid black; */
+  padding-inline: 25px;
+}
+.cvRightStyle3 hr{
+  border: 0.6px solid rgb(182, 181, 181);
+  margin-block: 6px;
+}
+.divimgS3{
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin: 30px auto;
+}
+.divimgS3 img{
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+.contactsS3,.educationsS3,.skills.S3,.educationsS4{
+  margin-block: 40px;
+}
+.contactsS3 h1,.educationsS3 h1,.skills.S3 h1,.AboutMeS3 h1,.WExperienceS3 h1,.lanuagesS3 h1,
+.contactsS4 h1,.educationsS4 h1,.skills.S4 h1,.AboutMeS4 h1,.WExperienceS4 h1,.lanuages.S4 h1{
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+hr{
+  margin-block: 4px;
+  border: 0.7px solid rgb(218, 216, 216);
+}
+.contactsS3 p,.educationsS3 p,.contactsS4 p,.educationsS4p{
+  margin-top: 10px;
+  font-size: 15px;
+  overflow-wrap: break-word;
+}
+.contactsS3 p i{
+  margin-right: 7px;
+  color: whitesmoke;
+}
+.skills.S3 ul,.lanuages.S3 ul,.skills.S4 ul,.lanuages.S4 ul{
+  margin-top: 20px;
+}
+.skills.S3 ul li,.lanuages.S3 ul li,.skills.S4 ul li,.lanuages.S4 ul li{
+  list-style-type: disc;
+  margin-top: 5px;
+}
+.skills.S3 .skilladdbtn,.lanuages.S3 .lanuageaddbtn{
+  border: 1px solid green !important;
+  background-color: transparent;
+  color: green;
+}
+.skills.S3 .skillremovebtn,.lanuages.S3 .lanuageremovebtn{
+  border: 1px solid red !important;
+  background-color: transparent;
+  margin-left: 5px;
+  color: red;
+}
+
+.NameRoleS3{
+  margin-top: 60px;
+  margin-left: 30px;
+}
+.NameRoleS3 h1{
+  font-size: 40px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ color: #163853;
+ font-weight: 800;
+ text-transform: capitalize;
+}
+.NameRoleS3 p{
+  text-transform: uppercase;
+  margin-left: 2px;
+  font-weight: 400;
+}
+.AboutMeS3,.WExperienceS3,.lanuages.S3,.AboutMeS4,.WExperienceS4,.lanuages.S4{
+  margin-block: 70px;
+}
+.AboutMeS3 p,.WExperienceS3 p,.AboutMeS4 p,.WExperienceS4 p{
+  line-height: 28px;
+  font-size: 16px;
+ word-wrap: break-word;
+}
+/* Style 4 Css */
+.headerS4{
+  width: 100%;
+  height: 170px;
+  background-color: #1b2942;
+  color: white;
+  display: flex;
+  /* align-items: center; */
+  padding-inline: 25px;
+}
+.headerS4 img{
+  width: 160px;
+  height: 160px;
+  border:  3px solid white;
+  border-radius: 50%;
+  position: relative;
+  top: 80px;
+}
+.NameTitleS4{
+  margin-left: 25%;
+  margin-top: 50px;
+}
+.NameTitleS4 h1{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ font-weight: 700;
+ color: whitesmoke;
+ font-size: 42px;
+}
+.NameTitleS4 p{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 16px;
+  margin-left: 3px;
+}
+.LeftRightMainS4{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: start; */
+}
+.LeftS4{
+  width: 30%;
+  min-height: 100vh;
+  padding-top: 90px;
+  padding-inline: 15px;
+  background-color: #d6dfed;
+}
+.RightS4{
+  width: 70%;
+  min-height: 100vh; 
+  /* border: 1px solid black; */
+  padding-inline: 30px;
+}
+.contactsS4 h1 ,.educationsS4 h1,.skills.S4 h1,.AboutMeS4 h1,.WExperienceS4 h1,.lanuages.S4 h1{
+ color: #1f304f;
+}
+.contactsS4 hr,.educationsS4 hr,.skills.S4 hr,.AboutMeS4 hr,.WExperienceS4 hr,.lanuages.S4 hr{
+  margin-bottom: 15px;
+  border: 0.9px dotted #1f304f;
+}
+/* Style 5 */
+.headerS4.S5{
+  background-color: #052F38;
+}
+.LeftS4.S5{
+  background-color: #d7eaee;
+}
+.downloaddiv{
+  width: 45px;
+  height: 45px;
+  background-color: rgba(0, 0, 0,0.95);
+  border-radius: 40px;
+  color: white;
+  text-align: center;
+  align-content: center;
+  font-size: 20px;
+  position: fixed;
+  right: -50px;
+  bottom: 40px;
+  scale: 0.1;
+  visibility: hidden;
+  transition: transform 0.8s, right 2s ease-in;
+}
+.downloaddiv.downloadBtnShow{
+  visibility: visible;
+  scale: 1;
+  right: 50px;
+}
+.WorkingOnItH1{
+  text-align: center;
+  align-self: center;
+  color: #052F38;
+  font-family: pacifico;
+}
