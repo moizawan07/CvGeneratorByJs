@@ -713,6 +713,8 @@ let option = select.value
     `
   }
    else{
+    let dow = document.querySelector('.downloaddiv')
+  dow.classList.remove('downloadBtnShow')  
     userCv.innerHTML = `
       <h1 class='WorkingOnItH1'>Working on it...</h1>
     `
