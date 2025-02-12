@@ -49,12 +49,11 @@ input:focus,textarea:focus{
   font-weight: 400;
   filter: drop-shadow(1px 1px 5px black);
 }
-.toggle-of-header{
+
+.nav-icon{
   display: none;
 }
-.toggle-of-header i{
-  font-size: 25px;
-}
+
 .login button{
   width: 90px;
   height: 28px;
@@ -86,6 +85,11 @@ input:focus,textarea:focus{
   background-color: whitesmoke;
   position: relative;
 }
+
+#leftbar-icon{
+  display: none;
+}
+
 .box p{
   margin-top: 13px;
   color: rgb(99, 97, 97);
@@ -134,7 +138,7 @@ input:focus,textarea:focus{
     /* Modal content */
     .modal {
       background: #fff;
-      width: 500px;
+      width: 550px;
       /* max-width: 750px; */
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -663,3 +667,242 @@ hr{
   color: #052F38;
   font-family: pacifico;
 }
+
+
+@media(max-width:1050px){
+  .container-left{
+    width: 22%;
+  }
+  .container-right{
+    width: 78%;
+  }
+  #userCV{
+    width: 95%;
+  }
+}
+@media(max-width:885px){
+  .header{
+    display: block;
+    /* min-height: 155px; */
+    height: auto;
+    align-items: start;
+    padding-top: 5px;
+    padding-bottom: 15px;
+  }
+  .navbar{
+    display: none;
+  }
+  .navbar ul{
+    display: block;
+    text-align: left;
+  }
+  .navbar ul li{
+    margin-top: 25px;
+    text-align: left;
+  }
+  .navbar #Select{
+    margin-top: 25px;
+  }
+  .login button{
+    display: none;
+  }
+
+  .nav-icon{
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+  }
+
+  .box li .Right-text-box {
+    display: none;
+}
+
+.home{
+  background-color: transparent;
+}
+.home i{
+  color: black !important;
+}
+.box li i{
+  color: #07829d;
+}
+.container-left{
+  width: 10%;
+  text-align: center;
+}
+.box p {
+  font-size: 12px;
+  text-align: left;
+}
+.container-right{
+  width: 90%;
+}
+.modal{
+  margin: auto;
+}
+}
+
+@media(max-width:600px){
+  .container-left{
+   display: none;
+  }
+  .box p{
+    display: none;
+  }
+  .box li{
+    margin-top: 55px;
+  }
+  .box li i{
+    font-size: 14px;
+  }
+  .container-right{
+    width: 100%;
+  }
+  #userCV{
+    width: 100%;
+    flex-wrap: wrap;
+    padding-inline: 5px;
+  }
+
+  .cvLeftStyle3 {
+    width: 28%;
+  }
+  .cvRightStyle3 {
+    width: 72%;
+    padding-inline: 5px;
+  }
+
+
+  .cv-logo img {
+    width: 119px;
+    height: 119px;
+  }
+  .divimgS3 {
+    width: 90px;
+    height: 90px;
+  }
+  .headerS4 img {
+    width: 100px;
+    height: 100px;
+    left: -15px;
+  }
+
+  .cvnav h1{
+    font-size: 25px;
+    margin-left: 10px;
+  }
+  .NameRoleS3 h1{
+    font-size: 25px;
+  }
+  .NameTitleS4 h1{
+      font-size: 27px;
+      margin-top: 50px;
+      margin-right: 7px;
+  }
+
+  .NameRoleS3 p ,.NameTitleS4 p{
+     font-size: 12px;
+  }
+  .cvnav p{
+    font-size: 12px;
+    margin-left: 11px;
+  }
+
+  .contactsS3 h1, .educationsS3 h1, .skills.S3 h1, .AboutMeS3 h1, .WExperienceS3 h1, .lanuagesS3 h1, .contactsS4 h1, .educationsS4 h1, .skills.S4 h1, .AboutMeS4 h1, .WExperienceS4 h1, .lanuages.S4 h1 {
+    font-size: 13px;
+  }
+  .contactsS3 p, .educationsS3 p, .contactsS4 p, .educationsS4p {
+    font-size: 10px;
+  text-size-adjust: adjust;
+  }
+
+  .contactsS3 p i {
+    font-size: 8px;
+    margin-right: 3px;
+  }
+
+  .skills ul li, .lanuages ul li {
+    margin-left: 5px;
+    list-style-type: none !important;
+}
+
+.SkillName, .lanuageName {
+ font-size: 12px;
+}
+input{
+ width: 10px;
+}
+
+.skills button, .lanuages button {
+  margin-top: 15px;
+  height: 25px;
+  word-spacing: 5px;
+}
+.skills button i, .lanuages button i {
+  padding-inline: 2px;
+  padding-block: 1px;
+  font-size: 10px;
+}
+
+.AboutMeS3 p, .WExperienceS3 p, .AboutMeS4 p, .WExperienceS4 p{
+  font-size: 10px;
+  line-height: 18px;
+}
+
+.educations h1, .contacts h1, .skills h1, .About h1, .Work-Experience h1, .lanuages h1 {
+  font-size: 20px;
+}
+ 
+.educations p, .contacts p, .skills p, .About p, .Work-Experience p, .lanuages p {
+  font-size: 11px;
+}
+.educations i, .contacts i, .skills i, .About i, .Work-Experience i, .lanuages i{
+  font-size: 10px;
+}
+
+.modal {
+ width: 93%;
+ padding-inline: 10px;
+ margin-left: 5%;
+}
+.modal h2 {
+  font-size: 20px;
+}
+  .modal label {
+    font-size: 12px;
+}
+.modal input, .modal textarea, .modal select {
+ font-size: 14px;
+ margin-top: 15px;
+ /* height: 25px; */
+ padding: 7px 10px;
+}
+
+.modal button {
+  padding: 5px 17px;
+  font-size: 14px;
+  font-variant: all-petite-caps;
+}
+.cvright{
+  padding-left: 5px;
+}
+.About p, .Work-Experience p, .lanuages p{
+  font-size: 10px;
+  line-height: 18px;
+}
+
+.RightS4 {
+  padding-inline: 10px;
+}
+.LeftS4{
+  padding-inline: 5px;
+}
+
+.cvLeftStyle3{
+  padding-inline: 7px;
+}
+
+}
+

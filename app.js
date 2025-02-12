@@ -753,3 +753,19 @@ const downloadCv = () => {
     
     
 }
+
+
+// NavBar On OFF 
+
+function navbar(){
+    let navbar = document.querySelector('.navbar')
+    
+  if(window.getComputedStyle(navbar).display === "block"){
+    navbar.style.display = 'none'
+  }
+  else{
+    navbar.style.display = 'block'
+  }
+   
+}
+
